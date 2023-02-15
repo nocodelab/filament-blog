@@ -51,10 +51,8 @@ class AuthorResource extends Resource
                                 'sm' => 2,
                             ]),
                         self::getContentEditor('bio'),
-                        Forms\Components\TextInput::make('github_handle')
-                            ->label(__('filament-blog::filament-blog.github')),
-                        Forms\Components\TextInput::make('twitter_handle')
-                            ->label(__('filament-blog::filament-blog.twitter')),
+                        Forms\Components\TextInput::make('linkedin_url')
+                            ->label('LinkedIn URL'),
                     ])
                     ->columns([
                         'sm' => 2,
@@ -93,10 +91,8 @@ class AuthorResource extends Resource
                     ->label(__('filament-blog::filament-blog.email'))
                     ->searchable()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('github_handle')
-                    ->label(__('filament-blog::filament-blog.github')),
-                Tables\Columns\TextColumn::make('twitter_handle')
-                    ->label(__('filament-blog::filament-blog.twitter')),
+                Tables\Columns\TextColumn::make('linkedin_url')
+                    ->label('LinkedIn URL'),
             ])
             ->filters([
                 //

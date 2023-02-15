@@ -25,8 +25,7 @@ class Author extends Model
         'email',
         'photo',
         'bio',
-        'github_handle',
-        'twitter_handle',
+        'linkedin_url',
     ];
 
     /**
