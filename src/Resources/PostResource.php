@@ -95,7 +95,7 @@ class PostResource extends Resource
                     ->columns([
                         'sm' => 2,
                     ])
-                    ->columnSpan(2),
+                    ->columnSpan(9),
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
@@ -109,9 +109,9 @@ class PostResource extends Resource
                                 ?Post $record
                             ): string => $record ? $record->updated_at->diffForHumans() : '-'),
                     ])
-                    ->columnSpan(1),
+                    ->columnSpan(3),
             ])
-            ->columns(3);
+            ->columns(12);
     }
 
     public static function table(Table $table): Table

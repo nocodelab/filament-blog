@@ -50,7 +50,10 @@ class AuthorResource extends Resource
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
-                        self::getContentEditor('bio'),
+                        self::getContentEditor('role')
+                            ->label('Role'),
+                        self::getContentEditor('bio')
+                            ->label('Bio'),
                         Forms\Components\TextInput::make('linkedin_url')
                             ->label('LinkedIn URL'),
                     ])

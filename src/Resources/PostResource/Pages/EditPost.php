@@ -8,4 +8,10 @@ use Stephenjude\FilamentBlog\Resources\PostResource;
 class EditPost extends EditRecord
 {
     protected static string $resource = PostResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return PostResource::getUrl('index');
+    }
+
 }
