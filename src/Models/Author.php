@@ -24,6 +24,7 @@ class Author extends Model
         'name',
         'email',
         'photo',
+        'role',
         'bio',
         'linkedin_url',
     ];

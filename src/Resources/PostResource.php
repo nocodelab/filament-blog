@@ -78,11 +78,13 @@ class PostResource extends Resource
                             ->label(__('filament-blog::filament-blog.author'))
                             ->relationship('author', 'name')
                             ->searchable()
+                            ->preload()
                             ->required(),
 
                         Forms\Components\BelongsToSelect::make('blog_category_id')
                             ->label(__('filament-blog::filament-blog.category'))
                             ->relationship('category', 'name')
+                            ->preload()
                             ->searchable()
                             ->required(),
 
@@ -95,7 +97,7 @@ class PostResource extends Resource
                     ->columns([
                         'sm' => 2,
                     ])
-                    ->columnSpan(9),
+                    ->columnSpan(10),
                 Forms\Components\Card::make()
                     ->schema([
                         Forms\Components\Placeholder::make('created_at')
@@ -109,7 +111,7 @@ class PostResource extends Resource
                                 ?Post $record
                             ): string => $record ? $record->updated_at->diffForHumans() : '-'),
                     ])
-                    ->columnSpan(3),
+                    ->columnSpan(2),
             ])
             ->columns(12);
     }

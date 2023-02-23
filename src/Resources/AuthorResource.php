@@ -3,6 +3,7 @@
 namespace Stephenjude\FilamentBlog\Resources;
 
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -50,7 +51,7 @@ class AuthorResource extends Resource
                             ->columnSpan([
                                 'sm' => 2,
                             ]),
-                        self::getContentEditor('role')
+                        TextInput::make('role')
                             ->label('Role'),
                         self::getContentEditor('bio')
                             ->label('Bio'),
